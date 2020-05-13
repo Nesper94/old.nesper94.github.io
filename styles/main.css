@@ -1,0 +1,22 @@
+html {margin: 2em;}
+body {font-family: serif; font-size: 1em; margin: 0 5%;
+max-width: 900px;}
+a {text-decoration: none;}
+a:hover {color: grey;}
+nav {text-align: left; position: absolute;
+    top: 0; height: 100%;
+    left: 0; padding: 3.2em 1em;
+    background: #555;}
+nav img{display: block; margin: auto auto 1em auto;}
+nav ul {margin: 0; padding: 0}
+nav li {list-style: none; text-align: center;
+border-bottom: 1px solid #777; padding: .5em;}
+nav a{display: block;
+    color: #aaa;}
+nav a:hover {color: #fafafa;}
+.container {position: relative; line-height: 1.5;
+    margin: auto 6em;
+width: 80%; text-align: justify;}
+footer {padding-bottom: 1em;}
+p img {margin-right: 1em;}
+#fenfisdi {margin: 3em auto;}
