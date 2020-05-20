@@ -1,9 +1,10 @@
+/** * { margin: 0; padding: 0; } **/
 html {margin: 2em;}
-body {font-family: serif; font-size: 1em; margin: 0 5%;
+body {font-family: Arial, serif; font-size: 1em; margin: 0 5%;
 max-width: 900px;}
 a {text-decoration: none;}
 a:hover {color: grey;}
-nav {text-align: left; position: absolute;
+nav {text-align: left; position: absolute; width: 100px;
     top: 0; height: 100%;
     left: 0; padding: 3.2em 1em;
     background: #555;}
@@ -14,8 +15,9 @@ border-bottom: 1px solid #777; padding: .5em;}
 nav a{display: block;
     color: #aaa;}
 nav a:hover {color: #fafafa;}
-.container {position: relative; line-height: 1.5;
-    margin: auto 6em;
+.container {position: in-line; line-height: 1.5;
+    margin: 0 auto;
+    padding: 0 100px;
 width: 80%; text-align: justify;}
 footer {padding-bottom: 1em;}
 p img {margin-right: 1em;}
