@@ -1,13 +1,22 @@
 /** * { margin: 0; padding: 0; } **/
 html {margin: 2em;}
-body {font-family: Arial, serif; font-size: 1em; margin: 0 auto;
-max-width: 900px;}
+body {font-family: Arial, serif; 
+    font-size: 1em; margin: 0 auto;
+    margin-left: 3em;
+
+}
 a {text-decoration: none;}
 a:hover {color: grey;}
 nav {text-align: left; position: absolute; width: 100px;
-    top: 0; height: 100%;
-    left: 0; padding: 3.2em 1em;
-    background: #555;}
+    top: 0;
+    padding: 3.2em 1em;
+    background: #555;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 9rem;
+    text-align: left;
+}
 nav img{display: block; margin: auto auto 1em auto;}
 nav ul {margin: 0; padding: 0}
 nav li {list-style: none; text-align: center;
