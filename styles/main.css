@@ -20,7 +20,7 @@ nav {text-align: left; position: absolute; width: 100px;
 nav img{display: block; margin: auto auto 1em auto;}
 nav ul {margin: 0; padding: 0}
 nav li {list-style: none; text-align: center;
-border-bottom: 1px solid #777; padding: .5em;}
+border-bottom: 1px solid #777; padding: .4em;}
 nav a{display: block;
     color: #aaa;}
 nav a:hover {color: #fafafa;}
@@ -31,6 +31,21 @@ nav a:hover {color: #fafafa;}
 width: 600px; text-align: justify;}
 footer {padding-bottom: 1em;}
 p img {margin-right: 1em;}
-#fenfisdi {margin: 3em auto;}
+
+#fenfisdi {margin: 3em auto 1em auto; padding: 0; border: 0}
 h1 {text-align: center}
 .download img {vertical-align: top}
+
+.nav-links {
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.social-net {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+
+}
