@@ -1,10 +1,10 @@
 /** * { margin: 0; padding: 0; } **/
 html {margin: 2em;}
-body {font-family: Arial, serif; 
+body {font-family: 'Noto Sans', serif;
     font-size: 1em; margin: 0 auto;
     margin-left: 3em;
-
 }
+
 a {text-decoration: none;}
 a:hover {color: grey;}
 nav {text-align: left; position: absolute; width: 100px;
@@ -24,10 +24,11 @@ border-bottom: 1px solid #777; padding: .5em;}
 nav a{display: block;
     color: #aaa;}
 nav a:hover {color: #fafafa;}
+
 .container {position: in-line; line-height: 1.5;
     margin: 0 auto;
     padding: 0 120px;
-width: 80%; text-align: justify;}
+width: 600px; text-align: justify;}
 footer {padding-bottom: 1em;}
 p img {margin-right: 1em;}
 #fenfisdi {margin: 3em auto;}
