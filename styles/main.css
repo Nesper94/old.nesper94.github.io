@@ -30,6 +30,8 @@ nav a:hover {color: #fafafa;}
     padding: 0 120px;
 width: 600px; text-align: justify;}
 footer {padding-bottom: 1em;}
+
+p {color: #404040}
 p img {margin-right: 1em;}
 
 #fenfisdi {margin: 3em auto 1em auto; padding: 0; border: 0}
@@ -47,5 +49,4 @@ h1 {text-align: center}
   height: 30px;
   width: 30px;
   margin: 5px;
-
 }
