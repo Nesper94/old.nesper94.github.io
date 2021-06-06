@@ -38,7 +38,7 @@ p img {margin-right: 1em;}
 li {color: #404040}
 
 #fenfisdi {margin: 3em auto 1em auto; padding: 0; border: 0}
-h1 {text-align: center}
+h1, p.title {text-align: center}
 .download img {vertical-align: top}
 
 .nav-links {
@@ -52,4 +52,30 @@ h1 {text-align: center}
   height: 30px;
   width: 30px;
   margin: 5px;
+}
+
+code.inline {
+  display: inline;
+  background: #dde;
+  margin: 2px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #331dd3;
+    border-radius: 8px;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: .6;
+    margin-bottom: 1.2em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
 }
