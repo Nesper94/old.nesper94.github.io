@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simulando el Represilador en C++ | Juan C. Arboleda R.</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="shortcut icon" href="../../images/nea-onnim-g.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <nav>
+      <img src="../../images/nea-onnim-nav.svg" alt="Nea onnim no sua, a ohu." width="50px">
+      <ul>
+        <li><a href="../../index.html">About me</a></li>
+        <li><a href="../../research.html">Research</a></li>
+        <li><a href="../../teaching.html">Teaching</a></li>
+        <li><a href="../../personal.html">Personal</a></li>
+        <li><a href="../../translations.html">Science in Spanish</a></li>
+      </ul>
+      <a href="https://fenfisdi.weebly.com/" target="_blank"><img src="../../images/fenfisdi.png" alt="FENFISDI logo"
+          width="100px" id="fenfisdi"></a>
+
+      <div class="nav-links">
+          <a class="social-net" href="https://twitter.com/Nesper94"
+            target="_blank"><img src="../../images/social-net/twitter.png"
+            width="30px" ></a>
+          <a class="social-net" href="https://github.com/Nesper94"
+            target="_blank"><img src="../../images/social-net/github.png"
+            width="30px" ></a>
+      </div>
+
+    </nav>
+
+    <div class="container">
+
+      <h1 id="repressilator">Simulando el Represilador en C++</h1>
+        <p class="title"><strong>Juan Camilo Arboleda Rivera</strong><br>
+        <strong>Instituto de Biología, Universidad de Antioquia, Colombia</strong><br>
+        <strong>2021-12-21</strong>
+      </p>
+
+        <p>En este tutorial vamos a simular el comportamiento del circuito genético
+          conocido como Represilador. Este circuito fue descrito por Elowitz et. al
+          en el año 2000 en su artículo <a href="https://doi.org/10.1038/35002125"
+          target="_blank">
+            "A synthetic oscillatory network of transcriptional regulators"</a>.
+
+          <!--
+            Adentro encontrarás el notebook <code class="inline">intro-python.ipynb</code> con
+            ejercicios prácticos diseñados principalmente para biólogos. Para ver este archivo necesitarás
+            instalar primero Jupyter siguiendo las siguientes instrucciones:</p>
+          -->
+
+        <h2 id="represilador">¿Qué es el Represilador?</h2>
+          <p>El Represilador es una red de regulación genética sintética, es decir, no
+            existe en la naturaleza sino que fue diseñada y creada en el laboratorio.
+            Esta red consiste básicamente en 3 genes: LacI, tetR y cI, los cuales son
+            todos ellos represores de la expresión genética. Cada gen produce una proteína que
+            reprime al siguiente gen como se muestra en la siguiente imagen:
+          </p>
+
+          <center>
+            <img src="./repressilator.png" alt="Represilador" width="400">
+          </center>
+
+<p>El Represilador se comporta de esta manera como un oscilador, ya que cuando uno de los genes aumenta de concentración,
+  comienza a reprimir al siguiente gen, pero al ser este reprimido, aumenta la concentración del tercer gen, que a su vez
+  reprimirá al primero, y de esta forma tendremos que cada uno de los genes va a aumentar y disminuir de concentración
+  continuamente.
+</p>
+
+        <h2 id="linux">¡Vamos al código!</h2>
+
+          <p>Para realizar la integración numérica de las ecuaciones diferenciales
+            vamos a usar la librería <a href="https://www.boost.org/doc/libs/release/libs/numeric/odeint/"
+            target="_blank">Odeint</a> que hace parte de <a href="https://www.boost.org/"
+            target="_blank">Boost</a>.
+          </p>
+
+          <p>Los valores de los parámetros del represilador los tomaremos de la
+            <a href="https://www.ebi.ac.uk/biomodels/BIOMD0000000012"
+            target="_blank">base de datos de BioModels</a>.
+          </p>
+
+          <h3 id="código-fuente">Código fuente</h3>
+          <p>Puedes descargar el código fuente del represilador <a href="https://github.com/Nesper94/represilador_cpp"
+            target="_blank">aquí</a>. Brevemente, lo que hacemos es definir una función en la cual le asignamos valores a los
+          parámetros del sistema y luego definimos las ecuaciones diferenciales.</p>
+
+          <p>Para compilar nuestro código, ejecutamos el siguiente comando:</p>
+            <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">g++</span> -I /path/to/boost/ -o represilador represilador.cpp</span></code></pre></div>
+
+          <p>Para ejecutar el programa y guardar los resultados de la simulación en
+            un archivo llamado <code class="inline">rep.tsv</code>, ejecutamos
+            el siguiente comando:</p>
+            <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">./represilador</span> > rep.tsv</span></code></pre></div>
+
+
+          <p>Ya que tenemos los datos de la simulación, vamos a visualizarlos usando Python.
+              <pre class="sourceCode python"><code class="sourceCode python">import matplotlib.pyplot as plt
+from pandas import read_csv
+
+df = read_csv('rep.tsv', sep='\t')
+
+plt.figure(figsize=(15,5))
+plt.plot(df.Tiempo, df.LacI, 'r', label='LacI')
+plt.plot(df.Tiempo, df.TetR, 'y', label='TetR')
+plt.plot(df.Tiempo, df.cI, 'b', label='cI')
+plt.legend()</code></pre>
+          </p>
+        <footer>
+          <address class="mail">
+            Contact me: <a href="mailto:juan.arboleda2@udea.edu.co">juan.arboleda2@udea.edu.co</a>
+          </address>
+          <small>This website was written in HTML from scratch with the aim of learning HTML</small>
+        </footer>
+    </div>
+  </body>
+</html>
