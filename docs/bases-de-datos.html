@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+</style>
+<meta name="generator" content="ReText 7.1.0">
+<title>bases-de-datos</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Bases de datos biológicas</h1>
+<hr>
+<p>Juan Camilo Arboleda Rivera<br>
+<strong>Actualizado:</strong> 2023-03-14</p>
+<hr>
+<h2>Introducción</h2>
+<p>En la era de la información las bases datos son herramientas esenciales. Como 
+su nombre lo indica, las bases de datos se encargan de almacenar de una
+forma organizada montones de datos para que los usuarios de la base de datos
+puedan hacer búsquedas y disponer de estos datos. En particular, las bases
+de datos biológicas almacenan información biológica proveniente de
+diferentes experimentos alrededor del mundo, así como literatura publicada y
+análisis computacionales.</p>
+<p>La disponibilidad de los datos procedentes de diferentes experimentos es
+esencial para asegurar la transparencia en la ciencia, así como su
+reproducibilidad. Además, estos datos pueden ser usados múltiples veces por
+diferentes investigadores para realizar diferentes tipos de análisis que
+permitan el avance de nuestro conocimiento sobre los seres vivos.</p>
+<p>Cada base de datos se especializa en un tipo de información determinada, de
+forma que existen algunas especializadas en almacenar secuencias biológicas,
+otras en información taxonómica, otras en información estructural de
+moléculas biológicas, otras en interacciones entre proteínas y muchas más.
+Cada una de estas bases de datos maneja formatos de archivos diferentes según 
+el tipo de información que maneje y sus diferentes necesidades. En esta 
+práctica conoceremos algunos de los formatos más usados, como el formato 
+<code>.fasta</code>, el <code>.gb</code> y el <code>.pdb</code>.</p>
+<h2>Objetivos</h2>
+<ol>
+<li>Conocer las principales bases de datos usadas en bioinformática.</li>
+<li>Conocer los principales formatos de archivos para almacenar información 
+biológica.</li>
+</ol>
+<h2>Bases de datos biológicas</h2>
+<ul>
+<li>
+<p><strong>NCBI</strong></p>
+<ul>
+<li><strong>GenBank:</strong> Base de datos primaria</li>
+<li><strong>Sequence Read Archive (SRA):</strong> Primaria</li>
+<li><strong>Basic Local Alignment Search Tool (BLAST):</strong> En realidad no es una base 
+ de datos sino una herramienta de alineamiento de secuencias</li>
+<li><strong>RefSeq:</strong> Base de datos curada</li>
+<li><strong>Expressed Sequence Tags (ESTs)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Online Mendelian Inheritance in Man (OMIM)</strong></p>
+</li>
+<li>
+<p><strong>ENA</strong></p>
+</li>
+<li><strong>Protein Data Bank (PDB)</strong></li>
+<li><strong>Uniprot/Swiss-Prot:</strong> Curada</li>
+<li><strong>Protein families (Pfam)</strong></li>
+</ul>
+<p>¡Hay muchísimas más bases de datos!</p>
+<p><img alt="Comic bases de datos biología" src="https://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=10.1371/journal.pcbi.1005128.g001" width="600px"></p>
+<h2>Mantenerse actualizado</h2>
+<p>Si quieren estar al día con las bases de datos biológicas, revisen la primera 
+publicación de cada año de la revista <a href="https://academic.oup.com/nar"><em>Nucleic Acids Research</em></a>, 
+esta es dedicada a bases de datos.</p>
+<h2><a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a></h2>
+<p>Base de datos de secuencias públicas. Es una de las bases de datos más grandes 
+por el hecho de ser <strong>primaria</strong>.</p>
+<p>Vamos a descargar archivos y ver su estructura interna.</p>
+<h3>El formato FASTA</h3>
+<p>Es el principal formato de archivo para almacenar secuencias biológicas
+(principalmente nucleótidos y proteínas). Tiene la siguiente estructura:</p>
+<pre><code>&gt; Mouse Pikachurin
+MDLISTFSLHFLLLACSLPPGAVSLRTALRKSGKVGPPLDIKLGALNCTAFSIQWKTPKR
+SGSSIIGYTVFYSEVGSDKSLRERSHNVPVGQDTLITEEVIGDLKPGTEYQVSVAAYSQT
+GKGRLSFPRHVTTLSQDSCLPPAAPQQPHVLVVSDSEVALSWRPGENEGSAPIQSYSVEF
+IRPDFDKSWTIIQERLQMDSMVIKGLDPDTNYQFAVKAMNAHGFSPRSWPSNTVRTLGPG
+EAGSGHYGPGYITNPGVSEDDDGSEDELDLDVSFEEVKPLPATKVGNKKFSVESKKTSVS
+NSVMGSRLAQPTSASLHETTVAIPPTPAQRKGKNSVAMMSRLFDMSCDETLCSADSFCVN
+DYAWGGSRCHCNLGKGGEACSEDIFIQYPQFFGHSYVTFEPLKNSYQAFQVTLEFRAEAE
+DGLLLYCGESEHGRGDFMSLALIRRSLHFRFNCGTGIAIIISETKIKLGAWHTVTLYRDG
+LNGMLQLNNGTPVTGQSQGQYSKITFRTPLYLGGAPSAYWLVRATGTNRGFQGCVQSLSV
+NGKKIDMRPWPLGKALNGADVGECSSGICDEASCIHGGTCAAIKADSYICLCPLGFRGRH
+CEDAFALTIPQFRESLRSYAATPWPLEPQHYLSFTEFEITFRPDSGDGVLLYSYDTGSKD
+FLSINMAAGHVEFRFDCGSGTGVLRSEAPLTLGQWHDLRVSRTAKNGILQVDKQKVVEGM
+AEGGFTQIKCNTDIFIGGVPNYDDVKKNSGILHPFSGSIQKIILNDRTIHVKHDFTSGVN
+VENAAHPCVGAPCAHGGSCRPRKEGYECDCPLGFEGLNCQKECGNHCLNTIIEAIEIPQF
+IGRSYLTYDNPNILKRVSGSRSNAFMRFKTTAKDGLLLWRGDSPMRPNSDFISLGLRDGA
+LIFSYNLGSGVASIMVNGSFSDGRWHRVKAVRDGQSGKITVDDYGARTGKSPGLMRQLNI
+NGALYVGGMKEIALHTNRQYLRGLVGCISHFTLSTDYHISLVEDAVDGKNINTCGAK
+</code></pre>
+<h2><a href="https://www.ncbi.nlm.nih.gov/sra">SRA (Sequence Read Archive)</a></h2>
+<p>Base de datos con secuencias en bruto.
+Busquemos en esta base de datos el gen <em>Zelda</em> y descarguemos archivos en
+formato FASTQ.</p>
+<h3>El formato FASTQ</h3>
+<p>El formato <a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> (FASTA with 
+Quality) es muy similar al FASTA pero incluye también información sobre la 
+calidad de la secuencia:</p>
+<p><img alt="Formato FASTQ" src="https://www.researchgate.net/publication/309134977/figure/fig2/AS:417452136648711@1476539753452/A-sample-of-the-FASTQ-file.png"></p>
+<p>Utilizando la línea de comandos en Linux también es posible descargar
+archivos FASTQ después de instalar la herramienta <code>SRA Toolkit</code>:</p>
+<pre><code class="language-bash">fastq-dump --stdout -X 2 SRR390728
+</code></pre>
+<p>También hay servidores que hacen sus datos disponibles mediante FTP, a ellos
+podemos acceder mediante una interfaz web o también mediante una línea de 
+comandos en Linux:</p>
+<pre><code class="language-bash">ftp ftp.1000genomes.ebi.ac.uk
+</code></pre>
+<h2><a href="https://www.ebi.ac.uk/ena/browser/home">ENA (European Nucleotide Archive)</a></h2>
+<p>Este es un repositorio de datos similar al NCBI y que contiene información
+de muchos tipos diferentes. Vayamos allí y busquemos una secuencia.</p>
+<h2><a href="https://omim.org/">OMIM (Online Mendelian Inheritance in Man)</a></h2>
+<p>OMIM como su nombre lo indica es una base de datos especializada en caracteres 
+de <strong>Herencia Mendeliana</strong> en el ser humano.</p>
+<h2><a href="https://www.rcsb.org/">Protein Data Bank</a></h2>
+<p>Esta es una base de datos de estructuras de proteínas, muy útil en biología 
+estructural y <a href="https://youtu.be/xcMSHy3CqXA">dinámica molecular</a>.</p>
+<p>Vamos al <a href="http://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/biological-assemblies">tutorial</a> 
+y descarguemos algunos archivos.</p>
+<p>Para visualizarlos vamos a usar el software <a href="https://pymol.org/2/">PyMOL</a> que 
+es Software Libre ;)</p>
+<h2><a href="https://www.uniprot.org/">Uniprot</a></h2>
+<p>Esta es una base de datos de proteínas, en donde se puede encontrar gran
+cantidad de información asociada a ellas.</p>
+<h2><a href="https://www.ebi.ac.uk/interpro/">Interpro (Antes llamado Pfam)</a></h2>
+<p>Base de datos sobre análisis funcional de proteínas, su clasificación en
+familias de proteínas y predicción de dominios funcionales y sitios
+importantes. También se pueden encontrar alineamientos múltiples de
+proteínas.</p>
+<p><img alt="alineamiento múltiple de proteínas" src="https://d3i71xaburhd42.cloudfront.net/a556ba6f4ae669b253de9a4a7cfa25f3d7b58742/4-Figure2-1.png"></p>
+<p>Si quieres aprender más sobre bioinformática puedes seguir <a href="https://www.ebi.ac.uk/training/online/courses/bioinformatics-terrified/">este
+tutorial</a></p>
+
+</body>
+</html>
